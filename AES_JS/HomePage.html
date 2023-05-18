@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AES Encryption and Decryption</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		form {
+			width: 500px;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 20px;
+			padding-bottom: 0;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px #ccc;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+
+		input[type="text"] {
+			width: 97%;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0px 0px 5px #ccc;
+			margin-bottom: 20px;
+		}
+
+        textarea {
+			width: 97%;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0px 0px 5px #ccc;
+			margin-bottom: 20px;
+		}
+
+		select {
+			width: 101%;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0px 0px 5px #ccc;
+			margin-bottom: 20px;
+		}
+
+		button {
+			background-color: #008CBA;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 20px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		button:hover {
+			background-color: #007a8a;
+		}
+	</style>
+</head>
+<body>
+	<h1>AES Encryption and Decryption</h1>
+	<form>
+		<label for="input">Input:</label>
+        <textarea id="input" name="input" rows="6">
+        </textarea>
+
+		<label for="keylength">Key Length:</label>
+		<select id="keylength" name="keylength">
+			<option value="128bits">128 bits</option>
+			<option value="192bits">192 bits</option>
+			<option value="256bits">256 bits</option>
+		</select>
+
+		<label for="key">Key:</label>
+		<input type="text" id="key" name="key">
+
+		<button type="button" id="encrypt">Encrypt</button>
+		<button type="button" id="decrypt">Decrypt</button>
+
+		<label for="result">Result:</label>
+        <textarea id="result" name="result" rows="6" readonly>
+        </textarea>
+	</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="module" src="./AES_Event.js"></script>
+</body>
+</html>
